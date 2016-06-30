@@ -1,0 +1,40 @@
+<div class="row">
+    <div class="col-md-5 new-add">
+        <form role="form" ng-submit="register()">
+                <div class="form-group">
+                    <span><input type="text" value="Enter your name here" class="form-control" ng-model="users.name"></span>
+                </div>
+                <div class="form-group">
+                    <a href="#" class="btn btn-success">ADD NEW</a>
+                </div>
+        </form>
+    </div>
+    <div class="col-md-5 new-edit">
+        <form role="form">
+                <div class="form-group">
+                    <span><input type="text" value="Enter your name here" class="form-control pull right"></span>
+                </div>
+                <div class="form-group">
+                    <a href="#" class="btn btn-success">EDIT</a>
+                </div>
+        </form>
+    </div>
+</div>
+<div class="row data-table">
+	<div class="col-md-12 col-lg-12 col-sm-12">
+		<div class="row inner-head">
+			<div class="col-md-10 col-lg-12 col-sm-12">
+				<strong>View your details below</strong>
+    			<div class="btn-group">
+        		<a ui-sref="users.table" href="#users/table" id="table" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-th-large">
+        		</span>Table</a> 
+        			<a ui-sref="users.list" href="#users/list" id="list" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-th-list">
+        				</span>List</a> 
+        			<a ui-sref="users.grid" href="#users/grid" id="grid" class="btn btn-default btn-sm"><span
+            			class="glyphicon glyphicon-th"></span>Grid</a>
+    			</div>
+			</div>
+		</div>
+		<div data-ui-view></div>
+    </div>
+</div>  

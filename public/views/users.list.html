@@ -1,0 +1,18 @@
+<table>
+        <tr>
+            <td align="right">Search :&emsp;</td>
+            <td><input ng-model="query" /></td>
+        </tr>   
+    </table>
+    <hr>
+<div id="products" class="row list-group">
+    <div class="item  col-xs-4 col-lg-4 ">
+        <ul class="list-group" ng-repeat="user in users|filter:query">
+            <li class="list-group-item">{{user.name}}</br>
+                <strong>ID:</strong> {{user._id}}</br>
+                <strong>DATE:</strong> {{user.date}}</br>
+                <strong>{{user.active}}</strong>
+            </li>
+        </ul>
+    </div>
+</div>
